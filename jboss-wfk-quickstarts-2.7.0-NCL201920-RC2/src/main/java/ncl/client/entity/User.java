@@ -55,6 +55,8 @@ public class User implements Serializable {
     @Email(message = "The email address must be in the format of name@domain.com")
     private String email;
 
+    @Column(name = "documentName")
+    private String documentName;
 
     @Column(name = "publicKey")
     private String publicKey;
@@ -66,7 +68,14 @@ public class User implements Serializable {
     @Column(name = "state")
     private String state;
 
+    public String getDocumentName() {
+		return documentName;
+	}
 
+	public void setDocumentName(String documentName) {
+		this.documentName = documentName;
+	}
+    
     public Long getId() {
         return id;
     }
